@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-project-sessions"
+version = "0.3.9"
+requires-python = ">=3.10"
+description = "Hermes Agent plugin: conversation projects with persistent background subsessions"
+
+[project.scripts]
+project-sessions-executor = "project_sessions.executor:main"
+
+[tool.setuptools]
+packages = ["project_sessions"]
+package-dir = {project_sessions = "plugin/project-sessions/project_sessions"}
+
+[tool.setuptools.package-data]
+project_sessions = ["migrations/*.sql"]

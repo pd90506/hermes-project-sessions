@@ -1,0 +1,19 @@
+name: project-sessions
+version: "0.3.9"
+description: "Persistent single-profile project workstreams and durable background events (full-permission workers with runtime approval escalation)."
+requires_hermes: ">=0.21.6"
+provides_tools:
+  - project_workstream_card
+  - project_workstream_create
+  - project_submit
+  - project_send
+  - project_status
+  - project_result
+  - project_cancel
+  - project_approval_decide
+  - project_event_ack
+provides_hooks:
+  - pre_llm_call
+  - post_gateway_admission
+  - pre_tool_call
+  - post_tool_call
